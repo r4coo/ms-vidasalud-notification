@@ -26,6 +26,7 @@ public class EventoParser {
         if (e.prestacionId() == null || e.fecha() == null || e.hora() == null) {
             throw new PayloadInvalidoException("Evento de cupo incompleto");
         }
+        if (e.disponibles() == null) throw new PayloadInvalidoException("Evento de cupo sin disponibles");
         if (e.disponibles() < 0) throw new PayloadInvalidoException("Cupos disponibles negativos");
         return e;
     }

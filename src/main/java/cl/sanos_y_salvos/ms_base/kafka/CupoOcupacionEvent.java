@@ -5,5 +5,5 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 /** Evento del tópico compactado vidasalud.catalogo.cupos (clave = prestacionId|fecha|hora). */
-public record CupoOcupacionEvent(String eventId, int version, Long prestacionId, String prestacion,
-                                 LocalDate fecha, LocalTime hora, int disponibles, Instant ocurridoEn) {}
+public record CupoOcupacionEvent(String eventId, Integer version, Long prestacionId, String prestacion,
+                                 LocalDate fecha, LocalTime hora, Integer disponibles, Instant ocurridoEn) {}
